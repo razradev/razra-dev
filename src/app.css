@@ -1,0 +1,92 @@
+@import 'tailwindcss';
+
+@layer base {
+	@theme {
+		--color-pri: #ffffff;
+		--color-bkg: #000000;
+		--color-gr: #1a1a1a;
+		--color-lgr: #505050;
+	}
+
+	main {
+		@apply absolute top-0 left-0 flex h-dvh w-dvw flex-col p-2 pt-8;
+	}
+
+	* {
+		line-height: 1.6rem;
+		font-family: 'Iosevka';
+		color: var(--color-pri);
+		@apply flex-row gap-2 rounded-lg bg-bkg outline-0 duration-200;
+	}
+
+	h1 {
+		font-size: 1.777rem;
+		@apply mb-2;
+	}
+
+	h2 {
+		font-size: 1.333rem;
+		@apply mb-1;
+	}
+
+	p {
+		font-size: 1rem;
+	}
+
+	button {
+		@apply rounded-lg bg-gr p-2 transition-colors hover:bg-pri hover:text-gr;
+	}
+
+	input {
+		@apply rounded-lg bg-transparent p-2 transition-colors placeholder:text-lgr hover:bg-bkg;
+	}
+
+	[contenteditable][placeholder]:empty:before {
+		content: attr(placeholder);
+		position: absolute;
+		color: var(--color-lgr);
+		background-color: transparent;
+	}
+
+	@font-face {
+		font-family: 'Iosevka';
+		font-weight: 700;
+		src: url('/Iosevka/IosevkaFixedSS10-Bold.woff2');
+	}
+
+	@font-face {
+		font-family: 'Iosevka';
+		font-weight: 400;
+		src: url('/Iosevka/IosevkaFixedSS10-Regular.woff2');
+	}
+
+	@font-face {
+		font-family: 'Iosevka';
+		font-weight: 300;
+		src: url('/Iosevka/IosevkaFixedSS10-Light.woff2');
+	}
+
+	@font-face {
+		font-family: 'Iosevka';
+		font-weight: 800;
+		src: url('/Iosevka/IosevkaFixedSS10-ExtraBold.woff2');
+	}
+
+	@font-face {
+		font-family: 'Iosevka';
+		font-weight: 400;
+		font-style: italic;
+		src: url('/Iosevka/IosevkaFixedSS10-Italic.woff2');
+	}
+
+	@font-face {
+		font-family: 'Iosevka';
+		font-weight: 700;
+		font-style: italic;
+		src: url('/Iosevka/IosevkaFixedSS10-BoldItalic.woff2');
+	}
+
+	.iso {
+		transform: scaleY(0.75) rotate(45deg);
+	}
+}
